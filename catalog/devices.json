@@ -133,14 +133,14 @@
       "file": {
         "name": "preload.so",
         "url": "https://raw.githubusercontent.com/bitplugg/rmv-pd2470-catalog/main/bin/preload_pd2470.so",
-        "sha256": "2de61f18d7958fcf4beae08225ffaceffa767e159f808988b6dab18ea60daa89",
-        "size": 150632
+        "sha256": "002d4ac3d6258cf6bed51c9e7afdedbad21fe0da1cc2809d94b1f7d30851ae68",
+        "size": 150200
       },
       "env": {
         "RMV_ATTEMPTS": "3",
         "RMV_RETRY_DELAY": "8"
       },
-      "matchCondition": "iQOO Z10 Lite (PD2470HF_EX / I2502) отечественная сборка GKI, точное совпадение образа по uname, banner, дате компиляции ядра и kallsyms (159961 символов). Ядро — стоковый сертифицированный GKI android13-5.15-2026-03_r16 (ci 15936251, JPEG 2026-07-27, dl.google.com). Ядро проверено против r12 (PD2361): core_sys_select и futex_wait покомандно идентичны. remove_waiter — уязвимая форма (mrs sp_el0) подтверждена дизасмом. Использован шаблон PD2361 (pselect маршрут): WAITER_COMPACT=1, WAITER_WORD_SHIFT=0, WAITER_LOCAL_OFF=0x80. INIT_TASK/INIT_CRED/nfulnl_logger/sysctl_bootid совпали байт-в-байт с r12-образом; сдвинуты ashmem-* + ядро others, подставлены свои значения из kallsyms. Копия оффсетов из /home/bitplugg/exploit/target_pd2470.h.",
+      "matchCondition": "iQOO Z10 Lite (PD2470HF_EX / I2502) отечественная сборка GKI, точное совпадение образа по uname, banner, дате компиляции ядра и kallsyms (159961 символов). Ядро — стоковый сертифицированный GKI android13-5.15-2026-03_r16 (ci 15936251, JPEG 2026-07-27, dl.google.com). Ядро проверено против r12 (PD2361): core_sys_select и futex_wait покомандно идентичны. remove_waiter — уязвимая форма (mrs sp_el0) подтверждена дизасмом. Использован шаблон PD2361 (pselect маршрут): WAITER_COMPACT=1, WAITER_WORD_SHIFT=0, WAITER_LOCAL_OFF=0x80. INIT_TASK/INIT_CRED/nfulnl_logger/sysctl_bootid совпали байт-в-байт с r12-образом; сдвинуты ashmem-* + ядро others, подставлены свои значения из kallsyms. Копия оффсетов из /home/bitplugg/exploit/target_pd2470.h. | UPDATE 2026-11-01: KernelSnitch geometry fixed for r16 — mm_struct cache 0x400 bytes (не 0x500), slab order 0 (не 3); дефолтные RMV-значения (0x500/order3) пропускали mm-сетку на этом ядре, из-за чего leak давал мусор и были хардфрейлы через freeze→reboot.",
       "route": "pselect",
       "label": "5.15.197-r16-pd2470"
     }
